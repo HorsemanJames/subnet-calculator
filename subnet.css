@@ -1,0 +1,33 @@
+body {
+    font-family: "Helvetica", "Arial", sans-serif;
+    color: #555;
+    margin: 0 auto;
+    max-width: 50em;
+    line-height: 1.5;
+}
+
+h1, h2, h3 {
+    color: #333;
+    margin-bottom: .1em;
+}
+
+input {
+    width: 8em;
+}
+
+.formula {
+    color: #2675c9;
+}
+
+#header {
+    color: #333;
+    height: 100px;
+    background-color: powderblue;
+    margin-bottom: 1em;
+}
+
+#header_text {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+}

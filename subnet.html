@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="subnet.css">
+<script type="text/javascript" src="subnet.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <h1 id="header_text">Address Calculator</h1>
+        </div>
+        <div id="input_box">
+            <form action="javascript:void(calc())">
+                IP Address:<input type="text" id="0" onkeypress="return isNumberKey(event)" maxlength="3">.
+                           <input type="text" id="1" onkeypress="return isNumberKey(event)" maxlength="3">.
+                           <input type="text" id="2" onkeypress="return isNumberKey(event)" maxlength="3">.
+                           <input type="text" id="3" onkeypress="return isNumberKey(event)" maxlength="3">/
+                           <input type="text" id="4" onkeypress="return isNumberKey(event)" maxlength="2">
+                           <input type="submit" value="Calculate">
+            </form>
+        </div>
+        <div id="result">
+            <div id="network_id">
+                Network ID:
+            </div>
+            <div id="broadcast_address">
+                Broadcast Address:
+            </div>
+        </div>
+        <div id="explanation">
+            <h3>Formula for Network ID:</h3>
+            <span class="formula">NETWORK_ID = IP_ADDRESS &amp SUBNET_MASK</span>
+            <h3>Formula for Broadcast Address:</h3>
+            <span class="formula">BROADCAST_ADDRESS = IP_ADRESS | (~NETWORK_ID)</span>
+            <h3>Explanation</h3>
+            <p>Understanding of IPv4 subnet calculations is useful if you ever need to calculate the broadcast address for a subnet or if you want to understand how routing decisions
+            are made. The broadcast address is the address to which you would send a packet if you wanted to send that packet to all IP addresses in your subnet. To understand how routing
+            decisions are made you need to calculate the network ID.</p>
+            <p> When an operating system is trying to determine where to send an IP packet, the operating system will consult the routing table. Each routing table entry contains
+            a network ID, subnet mask, and next hop. The operating system will look at the destination IP address of the packet and construct a network ID based on the subnet masks of the various 
+            entries in the routing table. If the resulting network ID matches the network ID in the routing table entry, then the operating system will route the IP packet to the next hop listed 
+            in the routing table entry.</p>
+        </div>
+    </div>
+</body> 
+</html>
